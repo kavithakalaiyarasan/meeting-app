@@ -2,6 +2,7 @@
 import './App.css'
 import Home from './Pages/Home/home.jsx'
 import Signin from './Pages/SignIn/signin.jsx'
+import { Routes, Route } from 'react-router-dom'  
 import { useState } from 'react'
 import JoinMeeting from './Pages/JoinMeeting/joinmeeting.jsx'
 import Meeting from './Pages/Meeting/meeting.jsx'
@@ -13,7 +14,7 @@ function App() {
   const [user, setUser] = useState(null)
 
   return (
-    <>
+  
         <Routes>
           <Route element={<Home user={user} setUser={setUser} />} path='/'></Route>
           <Route element={<Signin />} path='/signin'></Route>
@@ -25,8 +26,7 @@ function App() {
 
 
         </Routes>
-  
-    </>
+
   )
 }
 
