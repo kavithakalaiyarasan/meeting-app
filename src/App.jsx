@@ -1,6 +1,5 @@
 
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/home.jsx'
 import Signin from './Pages/SignIn/signin.jsx'
 import { useState } from 'react'
@@ -15,7 +14,6 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
         <Routes>
           <Route element={<Home user={user} setUser={setUser} />} path='/'></Route>
           <Route element={<Signin />} path='/signin'></Route>
@@ -27,7 +25,7 @@ function App() {
 
 
         </Routes>
-      </BrowserRouter>
+  
     </>
   )
 }
